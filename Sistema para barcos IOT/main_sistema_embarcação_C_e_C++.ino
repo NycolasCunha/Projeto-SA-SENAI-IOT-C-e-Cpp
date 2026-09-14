@@ -13,6 +13,13 @@ const int PIN_MOTOR = 9;     // Pino de controle do Motor de Vibração
 const int PIN_LED_RED = 11;  // LED Vermelho
 const int PIN_LED_YEL = 12;  // LED Amarelo
 const int PIN_LED_GRN = 13;  // LED Verde
+const int PIN_BUZZER = 8;    // Pino "+" do Buzzer Piezo (o "-" vai no GND)
+
+// Faixa de frequência do som (em Hz)
+const int FREQ_LONGE = 200;   // som grave (longe do limite)
+const int FREQ_PERTO = 2000;  // som agudo (muito perto)
+// Se quiser o efeito INVERTIDO (mais grave quanto mais perto),
+// troque os dois valores acima entre si.
 
 // Função para medir a distância em centímetros usando o sensor Ping)))
 long readUltrasonicDistance(int pin) {
@@ -36,6 +43,7 @@ void setup() {
   pinMode(PIN_LED_YEL, OUTPUT);
   pinMode(PIN_LED_RED, OUTPUT);
   pinMode(PIN_MOTOR, OUTPUT);
+  pinMode(PIN_BUZZER, OUTPUT);
 
   // Inicialização da Tela LCD
   lcd.begin(16, 2);
@@ -56,6 +64,17 @@ void loop() {
   Serial.print("Distancia: ");
   Serial.print(cm);
   Serial.println(" cm");
+
+  //  LÓGICA DO SOM (BUZZER) 
+  // O tom fica mais agudo (maior frequência) conforme o objeto se aproxima.
+  if (cm > 100) {
+    noTone(PIN_BUZZER); // fora da área de alerta: som desligado
+  } else {
+    int distanciaLimitada = constrain(cm, 0, 100);
+    // cm=100 (limite) -> FREQ_LONGE | cm=0 (colisão) -> FREQ_PERTO
+    int frequencia = map(distanciaLimitada, 100, 0, FREQ_LONGE, FREQ_PERTO);
+    tone(PIN_BUZZER, frequencia);
+  }
 
   // --- LÓGICA DE ALERTAS E NÍVEIS DE APROXIMAÇÃO ---
 
