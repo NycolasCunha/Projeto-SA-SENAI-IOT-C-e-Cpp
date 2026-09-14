@@ -1,6 +1,6 @@
-# Sensor Náutico IoT de Atracação
+# ARQUITETURA MODULAR - sistema de atracação e auxilio a epilhadeiras evitando colisões
 
-Sistema embarcado baseado em Arduino que auxilia a atracação de embarcações de médio porte, medindo a distância até o cais e emitindo alertas progressivos: **LED, LCD, vibração e som**.
+Sistema embarcado baseado em Arduino que auxilia a atracação de embarcações de médio porte e evita acidentes com empilhadeiras, medindo a distância até o cais e emitindo alertas progressivos: **LED, LCD, vibração e som**.
 
 Desenvolvido como projeto da disciplina de IoT — **SENAI Joinville, Análise e Desenvolvimento de Sistemas**.
 
@@ -10,7 +10,7 @@ Desenvolvido como projeto da disciplina de IoT — **SENAI Joinville, Análise e
 
 ##  O problema
 
-Embarcações de médio porte (pesca e lazer) raramente possuem sensores de proximidade de fábrica. A proa elevada cria um ponto cego, e vento/correnteza somam inércia à manobra — pequenos descuidos geram colisões contra o cais, com reparos de casco custando de **R$ 2.000 a R$ 5.000+** e dias de embarcação parada.
+Embarcações e empilhadeiras de médio porte (pesca e lazer) raramente possuem sensores de proximidade de fábrica na frente. A proa elevada ou as cargas da impilhadeira cria um ponto cego, e vento/correnteza somam inércia à manobra — pequenos descuidos geram colisões contra o cais, com reparos de casco custando de **R$ 2.000 a R$ 5.000+** e dias de embarcação ou manutenção parada.
 
 ##  A solução
 
