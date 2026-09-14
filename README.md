@@ -1,4 +1,4 @@
-# ARQUITETURA MODULAR - sistema de atracação e auxilio a epilhadeiras evitando colisões
+# ARQUITETURA MODULAR - sistema de atracação e auxilio a empilhadeiras evitando colisões
 
 Sistema embarcado baseado em Arduino que auxilia a atracação de embarcações de médio porte e evita acidentes com empilhadeiras, medindo a distância até o cais e emitindo alertas progressivos: **LED, LCD, vibração e som**.
 
