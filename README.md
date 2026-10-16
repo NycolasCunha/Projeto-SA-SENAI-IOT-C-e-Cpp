@@ -4,7 +4,7 @@ Sistema embarcado baseado em Arduino que auxilia a atracação de embarcações 
 
 Desenvolvido como projeto da disciplina de IoT — **SENAI Joinville, Análise e Desenvolvimento de Sistemas**.
 
-> Projeto desenvolvido por **Nycolas G. Leodoro** **Thatyana A. Freitas** ** Ana Beatriz S. Monteiro**
+> Projeto desenvolvido por **Nycolas G. Leodoro** , **Thatyana A. Freitas** , **Ana Beatriz S. Monteiro**
 
 ---
 
